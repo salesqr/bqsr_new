@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Check, Eye, Scale, ShieldCheck, Users } from "lucide-react";
 import VerifyForm from "@/components/VerifyForm";
 import { HexPattern, SectionHead, ServiceGlyph } from "@/components/ui";
-import { audiences, journey, services, standards, values } from "@/lib/site";
+import { audiences, journey, services, values } from "@/lib/site";
 
 const valueIcons = [Scale, Users, Eye];
 
@@ -167,27 +167,6 @@ export default function HomePage() {
                 <div className="num">{i + 1}</div>
                 <h3>{s.title}</h3>
                 <p>{s.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ----------------------------- Standards ---------------------------- */}
-      <section className="section">
-        <div className="container">
-          <SectionHead eyebrow="Standards" title="Recognized management system standards">
-            We work with widely adopted international standards across quality, environment, safety, information
-            security and more.
-          </SectionHead>
-          <div className="standards">
-            {standards.map((s) => (
-              <div className="standard" key={s.code}>
-                <span className="dot" />
-                <div>
-                  <b>{s.code}</b>
-                  <span>{s.name}</span>
-                </div>
               </div>
             ))}
           </div>

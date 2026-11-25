@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { PageHero, SectionHead, ServiceGlyph } from "@/components/ui";
-import { services, standards } from "@/lib/site";
+import { PageHero, ServiceGlyph } from "@/components/ui";
+import { services } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -46,25 +46,6 @@ export default function ServicesPage() {
                   View details <ArrowRight size={16} />
                 </Link>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section tint">
-        <div className="container">
-          <SectionHead eyebrow="Standards" title="Standards we work with">
-            Our audits and courses are aligned to widely recognized international management system standards.
-          </SectionHead>
-          <div className="standards">
-            {standards.map((s) => (
-              <div className="standard" key={s.code}>
-                <span className="dot" />
-                <div>
-                  <b>{s.code}</b>
-                  <span>{s.name}</span>
-                </div>
-              </div>
             ))}
           </div>
         </div>
