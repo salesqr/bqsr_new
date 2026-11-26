@@ -83,12 +83,7 @@ p { margin: 0 0 1em; }
 .btn-danger:hover { background: var(--bad-bg); }
 .btn-sm { padding: 9px 16px; font-size: .85rem; }
 
-/* ---------- Topbar & header ---------- */
-.topbar { background: var(--navy-950); color: #c9d3ee; font-size: .85rem; }
-.topbar .container { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 9px; padding-bottom: 9px; }
-.topbar a { color: var(--gold-light); font-weight: 600; }
-.topbar a:hover { color: #fff; }
-.topbar .loc { display: inline-flex; gap: 8px; align-items: center; }
+/* ---------- Header ---------- */
 .header { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, .94); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
 .header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, var(--navy-800) 0 33%, var(--gold) 33% 66%, var(--red) 66% 100%); opacity: .9; }
 .header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 82px; }
@@ -390,8 +385,6 @@ table.table { width: 100%; border-collapse: collapse; font-size: .92rem; }
   body { font-size: 16px; }
   .container { padding: 0 18px; }
   .section { padding: 68px 0; }
-  .topbar .loc { display: none; }
-  .topbar .container { justify-content: center; }
   .verify-form { grid-template-columns: 1fr; }
   .verify-card { padding: 24px 22px; }
   .grid.cols-2, .grid.cols-3, .grid.cols-4, .standards, .form-grid, .form-grid.three { grid-template-columns: 1fr; }
