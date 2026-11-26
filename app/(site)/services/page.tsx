@@ -15,11 +15,6 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Our Services"
         title="Certification, training and security assurance"
-        crumbs={
-          <>
-            <Link href="/">Home</Link> / <span>Services</span>
-          </>
-        }
       >
         Independent assessment and practical skill development, delivered by qualified auditors and trainers.
       </PageHero>

@@ -246,8 +246,6 @@ section { position: relative; }
 .page-hero h1 { color: #fff; font-size: clamp(2.1rem, 4.4vw, 3.2rem); max-width: 20ch; }
 .page-hero p { color: #c3d0ef; max-width: 62ch; font-size: 1.12rem; margin: 18px 0 0; }
 .page-hero .eyebrow { margin-bottom: 16px; }
-.crumbs { font-size: .85rem; color: #9fb0da; margin-bottom: 18px; display: flex; gap: 8px; align-items: center; }
-.crumbs a:hover { color: #fff; }
 .page-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: linear-gradient(90deg, var(--navy-700) 0 40%, var(--gold) 40% 75%, var(--red) 75% 100%); }
 
 /* ---------- Service detail ---------- */

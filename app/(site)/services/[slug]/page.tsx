@@ -27,11 +27,6 @@ export default async function ServicePage({ params }: Props) {
       <PageHero
         eyebrow="Our Services"
         title={service.title}
-        crumbs={
-          <>
-            <Link href="/">Home</Link> / <Link href="/services">Services</Link> / <span>{service.title}</span>
-          </>
-        }
       >
         {service.short}
       </PageHero>

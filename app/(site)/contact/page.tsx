@@ -16,11 +16,6 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact Us"
         title="Let’s start a conversation"
-        crumbs={
-          <>
-            <Link href="/">Home</Link> / <span>Contact Us</span>
-          </>
-        }
       >
         Tell us about your organization and what you are looking for. We will respond with the next steps.
       </PageHero>

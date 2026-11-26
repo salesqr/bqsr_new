@@ -58,18 +58,15 @@ export function PageHero({
   eyebrow,
   title,
   children,
-  crumbs,
 }: {
   eyebrow?: string;
   title: React.ReactNode;
   children?: React.ReactNode;
-  crumbs?: React.ReactNode;
 }) {
   return (
     <section className="page-hero">
       <HexPattern />
       <div className="container" style={{ position: "relative" }}>
-        {crumbs && <div className="crumbs">{crumbs}</div>}
         {eyebrow && <div className="eyebrow">{eyebrow}</div>}
         <h1>{title}</h1>
         {children && <p>{children}</p>}

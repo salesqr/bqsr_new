@@ -145,7 +145,7 @@ create policy "admins delete enquiries"
 -- ---------------------------------------------------------------------
 -- 6. Public "Check Certificate" function
 --    Input : first 3 letters of company name + certificate number
---    Output: public-safe fields only (no address / contact details).
+--    Output: the 11 public fields (partner name and contact details stay private).
 --    Status is shown exactly as set by the admin.
 -- ---------------------------------------------------------------------
 create or replace function public.verify_certificate(
@@ -154,12 +154,15 @@ create or replace function public.verify_certificate(
 )
 returns table (
   company_name             text,
+  address                  text,
   scope                    text,
   standard                 text,
   certificate_no           text,
   country                  text,
+  registration_date        date,
   issue_date               date,
   expiry_surveillance_date date,
+  recertification_date     date,
   status                   text
 )
 language plpgsql
@@ -178,12 +181,15 @@ begin
   return query
   select
     c.company_name,
+    c.address,
     c.scope,
     c.standard,
     c.certificate_no,
     c.country,
+    c.registration_date,
     c.issue_date,
     c.expiry_surveillance_date,
+    c.recertification_date,
     c.status
   from public.certificates c
   where lower(left(btrim(c.company_name), 3)) = v_prefix

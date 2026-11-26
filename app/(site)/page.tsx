@@ -17,7 +17,7 @@ export default function HomePage() {
           <div>
             <div className="eyebrow">Independent Certification &amp; Training</div>
             <h1>
-              Trust, <em>verified</em> against recognized standards.
+              Impartial audits. Practical training. <em>Trusted results.</em>
             </h1>
             <p className="lead">
               BQSR Quality Assurance is an independent certification and training body. We combine practical training

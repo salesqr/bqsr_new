@@ -13,12 +13,15 @@ export const metadata: Metadata = {
 
 type Cert = {
   company_name: string;
+  address: string | null;
   scope: string;
   standard: string;
   certificate_no: string;
   country: string;
+  registration_date: string | null;
   issue_date: string | null;
   expiry_surveillance_date: string | null;
+  recertification_date: string | null;
   status: "Active" | "Suspended" | "Withdrawn" | "Expired";
 };
 
@@ -63,11 +66,6 @@ export default async function VerifyPage({
       <PageHero
         eyebrow="Check Certificate"
         title="Verify a BQSR certificate"
-        crumbs={
-          <>
-            <Link href="/">Home</Link> / <span>Check Certificate</span>
-          </>
-        }
       >
         Enter the first 3 letters of the company name and the certificate number to confirm its current status.
       </PageHero>
@@ -103,35 +101,47 @@ export default async function VerifyPage({
             <article className="result" key={c.certificate_no} style={{ marginBottom: 24 }}>
               <div className="result-head">
                 <div>
-                  <small>Certified organization</small>
+                  <small>Company name</small>
                   <h3>{c.company_name}</h3>
                 </div>
                 <span className={`badge ${badgeClass(c.status)}`}>{c.status}</span>
               </div>
               <dl>
-                <div>
-                  <dt>Certificate no.</dt>
-                  <dd>{c.certificate_no}</dd>
+                <div className="wide">
+                  <dt>Address</dt>
+                  <dd style={{ fontWeight: 500, whiteSpace: "pre-line" }}>{c.address || "—"}</dd>
+                </div>
+                <div className="wide">
+                  <dt>Scope of certification</dt>
+                  <dd style={{ fontWeight: 500 }}>{c.scope}</dd>
                 </div>
                 <div>
                   <dt>Standard</dt>
                   <dd>{c.standard}</dd>
                 </div>
                 <div>
+                  <dt>Certificate no.</dt>
+                  <dd>{c.certificate_no}</dd>
+                </div>
+                <div>
                   <dt>Country</dt>
                   <dd>{c.country}</dd>
                 </div>
                 <div>
-                  <dt>Date of issue</dt>
+                  <dt>Registration date</dt>
+                  <dd>{fmt(c.registration_date)}</dd>
+                </div>
+                <div>
+                  <dt>Issue date</dt>
                   <dd>{fmt(c.issue_date)}</dd>
                 </div>
-                <div className="wide">
+                <div>
                   <dt>Expiry / Surveillance due date</dt>
                   <dd>{fmt(c.expiry_surveillance_date)}</dd>
                 </div>
                 <div className="wide">
-                  <dt>Scope of certification</dt>
-                  <dd style={{ fontWeight: 500 }}>{c.scope}</dd>
+                  <dt>Re-certification date</dt>
+                  <dd>{fmt(c.recertification_date)}</dd>
                 </div>
               </dl>
             </article>

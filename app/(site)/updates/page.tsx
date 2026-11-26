@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Megaphone } from "lucide-react";
 import { PageHero } from "@/components/ui";
 
@@ -14,11 +13,6 @@ export default function UpdatesPage() {
       <PageHero
         eyebrow="Recent Updates"
         title="The latest from BQSR"
-        crumbs={
-          <>
-            <Link href="/">Home</Link> / <span>Recent Updates</span>
-          </>
-        }
       />
 
       <section className="section">

@@ -18,11 +18,6 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="An independent body committed to trust, competence and excellence"
-        crumbs={
-          <>
-            <Link href="/">Home</Link> / <span>About Us</span>
-          </>
-        }
       >
         BQSR Quality Assurance Pvt Ltd is an independent certification and training body committed to helping
         organizations and professionals build trust, competence and operational excellence against recognized
